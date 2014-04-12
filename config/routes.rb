@@ -14,7 +14,11 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resource :sendtext
+    resource :receivetext
+
     post 'sendtext/send_text_message' => 'sendtext#send_text_message', :as => 'send_text_message_path'  
+    post 'receive_text_message' => 'receivetext#index', :as => 'index_path'  
+
   # Example resource route with options:
   #   resources :products do
   #     member do
