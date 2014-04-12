@@ -6,5 +6,8 @@ class ReceivetextController < ApplicationController
 		from_number = params["From"]
 		 
 		SMSLogger.log_text_message from_number, message_body
+
+		render :nothing => true
 	end
 end
+
